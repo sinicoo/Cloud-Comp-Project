@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StayOn</title>
+    <link rel="stylesheet" href="stylesss.css" />
+</head>
+<style>
+    /* Ad Section Styling */
+    #adSection {
+        display: none; /* Hidden by default */
+        position: fixed; /* Position fixed to stay in view */
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Adjust for centering */
+        z-index: 1000; /* Make sure it appears above other elements */
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+        padding: 20px; /* Padding around the video */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        width: 80%; /* Optional: Set a max width for the ad section */
+        max-width: 600px; /* Optional: Set a max width for larger screens */
+        text-align: center; /* Center text inside the ad section */
+    }
+    
+    #adVideo {
+        max-width: 100%; /* Responsive video */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Round video corners */
+    }
+    
+    #skipAdButton {
+        margin-top: 10px; /* Space above the button */
+        padding: 10px 20px; /* Padding for the button */
+        border: none; /* Remove default border */
+        border-radius: 5px; /* Rounded corners */
+        background-color: #ff0000; /* Red background */
+        color: #fff; /* White text */
+        cursor: pointer; /* Pointer on hover */
+    }
+    
+    #skipAdButton:hover {
+        background-color: #e60000; /* Darker red on hover */
+    }
+
+</style>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="Profile" />
+        </div>
+        <div class="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#game">Games</a>
+            <a href="login.html">Sign In</a>
+        </div>
+    </nav>
+
+    <aside id="home" class="main">
+        <div class="main-container">
+            <div class="column-left">
+                <h1 class="header">Welcome to our Website!</h1>
+                <p class="pa">Welcome to StayOn</p>
+                <a href="login.html" class="button">Start</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Ad Section -->
+    <div id="adSection" style="display: none;">
+        <h2>Personalized Advertisement</h2>
+        <video id="adVideo" width="640" height="480" controls>
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br />
+        <button id="skipAdButton">Skip Ad</button>
+    </div>
+
+    <aside id="game" class="game">
+        <section class="game-section">
+            <h2>Explore Our Games</h2>
+            <div class="game-grid">
+                <div class="game-card">
+                    <a href="game.html">
+                        <img src="images/game1.png" alt="Game 1" />
+                        <h3>Memory Card Game</h3>
+                        <p>Hehe Hulaan mo!</p>
+                    </a>
+                </div>
+                <div class="game-card">
+                    <a href="tetris.html">
+                        <img src="images/game2.png" alt="Game 2" />
+                        <h3>Tetris</h3>
+                        <p>DUNNN DUN DUN DUNN DUNN DUNN DOOOO</p>
+                    </a>
+                </div>
+                <div class="game-card">
+                    <a href="Snake.html">
+                    <img src="images/game3.png" alt="Game 3" />
+                    <h3>Snake Game</h3>
+                    <p>Snake go brrr!</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </aside>
+
+    <aside id="about" class="about-section">
+        <div class="about-content">
+            <div class="texting">
+            <h2>About Us</h2>
+            <p>Welcome to StayOn, your go-to platform for seamless online experiences. We offer a variety of engaging games and a vibrant community!</p>
+        </div>
+    </div>
+    </aside>
+
+    <aside id="team" class="team-section">
+        <div class="texting">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="images/alex.jpg" alt="Alex Indiongco" />
+                <h3>Alex Indiongco</h3>
+                <p>CEO & Founder</p>
+                <p>apindiongco@student.hau.edu.ph</p>
+            </div>
+            <div class="team-card">
+                <img src="images/pierre.jpg" alt="Pierre Lumba" />
+                <h3>Pierre Lumba</h3>
+                <p>Founder</p>
+                <p>palumba@student.hau.edu.ph</p>
+            </div>
+            <div class="team-card">
+                <img src="images/nico.jpg" alt="Nico Santos" />
+                <h3>Nico Santos</h3>
+                <p>Designer & Founder</p>
+                <p>ncsantos@student.hau.edu.ph</p>
+            </div>
+        </div>
+    </div>
+    </aside>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 StayOn. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/sinicoo13"><img src="images/fb.png" alt="Facebook" /></a>
+                <a href="https://x.com/home?lang=en"><img src="images/x.png" alt="Twitter" /></a>
+                <a href="https://www.instagram.com"><img src="images/ig.png" alt="Instagram" /></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const adSection = document.getElementById('adSection');
+            const adVideo = document.getElementById('adVideo');
+            const skipAdButton = document.getElementById('skipAdButton');
+
+            const ads = {
+                male: 'ads/male.mp4',
+                female: 'ads/female.mp4'
+            };
+
+            const userGender = localStorage.getItem('userGender');
+
+            if (userGender && ads[userGender]) {
+                adSection.style.display = 'block'; // Show ad section
+                adVideo.src = ads[userGender]; // Set video source
+                adVideo.play(); // Play the ad
+
+                skipAdButton.addEventListener('click', redirectToHome);
+                adVideo.addEventListener('ended', redirectToHome);
+            }
+
+            function redirectToHome() {
+                localStorage.removeItem('userGender');
+                window.location.href = 'index.html'; // Redirect to home
+            }
+        });
+    </script>
+</body>
+</html>

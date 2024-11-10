@@ -1,0 +1,474 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Afacad Flux", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    height: 80px;
+    background-color: #070F2B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) / 2);
+    z-index: 1000;
+}
+
+.logo{
+    width: 5%;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    padding: 0 1.5rem;
+    font-family: "Afacad Flux", sans-serif;
+}
+
+.main{
+    background: rgb(67, 118, 131);
+    background-image: url('images/background.gif');
+}
+
+.main-container{
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    padding: 3rem calc((100vw - 1300px) / 2);
+    shape-outside: 40%;
+}
+
+.column-left{
+    font-family: "Cute Font", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    padding: 0 2rem;
+}
+
+.header{
+    font-family: "Roboto", sans-serif;
+}
+
+.pa{
+    font-family: "Roboto", sans-serif;
+}
+
+.column-left h1{
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.column-left p{
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.button{
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    border: none;
+    color: lightslategray;
+    background: white;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+button:hover{
+    background: lightgoldenrodyellow;
+    color: black;
+}
+
+.scroll-container {
+    background-image: url('images/back2.png');
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.scroll-container img {
+    padding: 10px;
+    }
+
+@media screen and (max-width: 768px) {
+    .main-container{
+        grid-template-columns: 0.5fr;
+    }
+    
+}
+
+
+.about-me{
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    height: 30vh;
+    padding: 1rem calc((100vw - 1000px) / 2);
+    shape-outside: 40%;
+}
+
+.ab{
+    font-size: 2rem;
+}
+
+.pab{
+    font-size: 1.5rem;
+}
+
+.text {
+    color: #ffffff;
+    line-height: 1.6;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.soc{
+    background-color: rgb(80, 140, 155);
+}
+
+
+.social-container{
+    grid-template-columns: 1fr 1fr;
+    height: 96vh;
+    padding: 3rem calc((100vw - 1300px) / 2);
+    shape-outside: 40%;
+}
+
+.head1{
+    text-align: center;
+    font-size: 3rem;
+    color: #f2f2f2;
+}
+
+.row > .panel {
+    padding: 0 8px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.panel {
+    float: left;
+    width: 25%;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mySlides {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+img {
+    margin-bottom: -4px;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active, .demo:hover {
+    opacity: 1;
+}
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #4D4D4D;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #6b8b8f, #39555b);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #789C9F, #4E6E74);
+}
+.backgrounda{
+    background-color: #070F2B;
+    
+}
+
+.game-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+  
+  .game-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+
+  .game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .game-card {
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .game-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .game-card h3 {
+    font-size: 24px;
+    margin: 10px;
+  }
+  
+  .game-card p {
+    font-size: 16px;
+    margin: 10px;
+    color: #bbb;
+  }
+  
+
+  .team-section {
+    padding: 50px 0;
+    background-color: #161515;
+    text-align: center;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    color: #161515;
+}
+
+.team-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    font-size: small;
+}
+
+.team-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.team-card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.team-card p {
+    margin-top: 10px;
+    color: #555;
+}
+  
+/* About Section */
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-image: url('images/background2.gif'); /* Add your GIF here */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Make text white to contrast the background */
+    position: relative;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+}
+.texting{
+    color: white;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: rgb(255, 255, 255);
+  }
+  
+  .b2 {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #04293A;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .b2:hover {
+    background-color: #555;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  /* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+}
+
+footer .social-icons img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1); /* Make icons white */
+}
+
+footer p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Card Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <link rel="stylesheet" href="ggame.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="Profile"/>
+        </div>
+        <div class="nav">
+            <a href="index.html">Home</a>
+        </div> 
+    </nav>
+    <header>
+        <h1>Memory Card Game</h1>
+    </header>
+    <main>
+        <section class="game">
+            <ul class="stats">
+                <li id="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></li>
+                <li>
+                    <p>Attempts</p>
+                    <p id="attempts">0</p>
+                </li>
+                <li><i class="fas fa-hourglass-start"></i>
+                    <p><span id="minutes">00</span>:<span id="seconds">00</span></p>
+                </li>
+                <li><i class="fas fa-undo"></i></li>
+            </ul>
+
+            <div id="memory-game">
+
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> are licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+    </footer>
+    <script src="ggame.js"></script>
+</body>
+</html>
