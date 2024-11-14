@@ -20,7 +20,7 @@ StayOn.Site is a website developed as a final project for the Cloud Computing co
 ## Screenshots
 
 ### Home Page
-![Home Page](README/port.PNG)
+![Home Page](Pictures/port.PNG)
 
 ### About Us Page
-![About Us Page](README/port2.PNG)
+![About Us Page](Pictures/port2.PNG)
