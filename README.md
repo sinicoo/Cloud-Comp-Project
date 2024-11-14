@@ -1,18 +1,26 @@
-Cloud Computing Finals
-Project Name: StayOn.Site
+# StayOn.Site
 
-Started: 10-1-2024 Submitted: 10-24-2024
+**Cloud Computing Finals Project**
 
-Description: StayOn.Site is a Website made in fulfillment for our Finals requirement for Cloud Computing with our Professor Sir. Ulysses Raymond F. Monsale. This website contains all the fundamentals and advanced techniques taught by Sir. Ulysses and AWS Cloud Academy.
+- **Started:** October 1, 2024  
+- **Submitted:** October 24, 2024
 
-Members:
+## Project Overview
 
-Indiongco, Alex Andhrei
-Lumba, Pierre Ellezar
-Santos, Nicolai Isaiah
+StayOn.Site is a website developed as a final project for the Cloud Computing course under Professor Ulysses Raymond F. Monsale. The project integrates core and advanced cloud concepts taught by Professor Ulysses and AWS Cloud Academy, demonstrating skills acquired in web development and cloud deployment.
 
+## Team Members
 
-![Home Page](Pictures/port.PNG)
+- **Alex Andhrei Indiongco**
+- **Pierre Ellezar Lumba**
+- **Nicolai Isaiah Santos**
 
-![About Us Page](Pictures/port2.PNG)
+---
 
+## Screenshots
+
+### Home Page
+![Home Page](README/port.PNG)
+
+### About Us Page
+![About Us Page](README/port2.PNG)
