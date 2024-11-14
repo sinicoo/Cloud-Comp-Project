@@ -12,4 +12,7 @@ Lumba, Pierre Ellezar
 Santos, Nicolai Isaiah
 
 
-![Home Page](pictures/port.png)
+![Home Page](Pictures/port.png)
+
+![About Us Page](Pictures/port2.png)
+
